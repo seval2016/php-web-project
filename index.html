@@ -141,22 +141,22 @@
                     <!-- Butonlar - Giriş, üye ol ve admin butonları -->
                     <div class="header-buttons">
                         <!-- Giriş Yap Butonu -->
-                        <a href="auth/index.php?action=login" class="btn btn-primary">
+                        <button class="btn btn-primary" onclick="showLoginModal()">
                             <i class="btn-icon">🔐</i>
                             <span class="btn-text">Giriş Yap</span>
-                        </a>
+                        </button>
                         
                         <!-- Üye Ol Butonu -->
-                        <a href="auth/index.php?action=register" class="btn btn-secondary">
+                        <button class="btn btn-secondary" onclick="showRegisterModal()">
                             <i class="btn-icon">👤</i>
                             <span class="btn-text">Üye Ol</span>
-                        </a>
+                        </button>
                         
-                        <!-- Admin Butonu -->
-                        <a href="admin/index.php" class="btn btn-admin" title="Admin Paneli">
-                            <i class="admin-icon">⚙️</i>
-                            <span class="admin-text">Admin</span>
-                        </a>
+                        <!-- Demo Butonu -->
+                        <button class="btn btn-admin" onclick="showDemoModal()" title="Demo İzle">
+                            <i class="admin-icon">▶️</i>
+                            <span class="admin-text">Demo</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -199,7 +199,7 @@
     </nav>
 
     <!-- Ana İçerik - Site ana bölümü -->
-    <main class="main-content">
+    <main id="home" class="main-content">
         <div class="container">
             <!-- Ürünler Bölümü - Ürün kartları ve fiyatlandırma -->
             <section id="products" class="products-section">
@@ -528,7 +528,425 @@
         </div>
     </footer>
 
-    <!-- JavaScript dosyası - Modül sistemi ile yükleniyor -->
+    <!-- Modal Sistemleri -->
+    <!-- Giriş Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>🔐 Giriş Yap</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">E-posta:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Şifre:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Giriş Yap</button>
+            </form>
+            <p>Hesabınız yok mu? <a href="#" onclick="switchModal('loginModal', 'registerModal')">Üye Ol</a></p>
+        </div>
+    </div>
+
+    <!-- Kayıt Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>👤 Üye Ol</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Ad Soyad:</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">E-posta:</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Şifre:</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <button type="submit" class="btn btn-secondary full-width">Üye Ol</button>
+            </form>
+            <p>Zaten hesabınız var mı? <a href="#" onclick="switchModal('registerModal', 'loginModal')">Giriş Yap</a></p>
+        </div>
+    </div>
+
+    <!-- Demo Modal -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('demoModal')">&times;</span>
+            <h2>▶️ Demo İzle</h2>
+            <div class="demo-content">
+                <p>🚀 Destan Teknoloji çözümlerini keşfedin!</p>
+                <div class="demo-video-placeholder">
+                    <div class="video-icon">📹</div>
+                    <p>Demo Video Yakında!</p>
+                </div>
+                <div class="demo-features">
+                    <h3>Demo İçeriği:</h3>
+                    <ul>
+                        <li>✅ E-Ticaret Sistemi Tanıtımı</li>
+                        <li>✅ Muhasebe Yazılımı Özellikleri</li>
+                        <li>✅ AI Destekli Çözümler</li>
+                        <li>✅ Canlı Destek Sistemi</li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary" onclick="requestDemo()">Demo Talep Et</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Fonksiyonları -->
+    <script>
+        // Modal Fonksiyonları
+        function showLoginModal() {
+            document.getElementById('loginModal').style.display = 'block';
+        }
+
+        function showRegisterModal() {
+            document.getElementById('registerModal').style.display = 'block';
+        }
+
+        function showDemoModal() {
+            document.getElementById('demoModal').style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        function switchModal(currentModal, targetModal) {
+            closeModal(currentModal);
+            setTimeout(() => {
+                document.getElementById(targetModal).style.display = 'block';
+            }, 200);
+        }
+
+        // Modal dışına tıklayınca kapat
+        window.onclick = function(event) {
+            const modals = ['loginModal', 'registerModal', 'demoModal'];
+            modals.forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+
+        // Form Submit Handlers
+        document.addEventListener('DOMContentLoaded', function() {
+            // Giriş Formu
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('loginEmail').value;
+                const password = document.getElementById('loginPassword').value;
+                
+                // Simüle edilmiş giriş
+                showNotification('✅ Giriş başarılı! Hoş geldiniz.', 'success');
+                closeModal('loginModal');
+                
+                // Form temizle
+                this.reset();
+            });
+
+            // Kayıt Formu
+            document.getElementById('registerForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('registerName').value;
+                const email = document.getElementById('registerEmail').value;
+                const password = document.getElementById('registerPassword').value;
+                
+                // Simüle edilmiş kayıt
+                showNotification('✅ Kayıt başarılı! Hoş geldiniz.', 'success');
+                closeModal('registerModal');
+                
+                // Form temizle
+                this.reset();
+            });
+
+            // Newsletter Formu
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                const button = newsletterForm.querySelector('.newsletter-btn');
+                const input = newsletterForm.querySelector('.newsletter-input');
+                
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const email = input.value;
+                    
+                    if (email && validateEmail(email)) {
+                        showNotification('✅ Bültene başarıyla abone oldunuz!', 'success');
+                        input.value = '';
+                    } else {
+                        showNotification('❌ Lütfen geçerli bir e-posta adresi girin.', 'error');
+                    }
+                });
+            }
+        });
+
+        // Yardımcı Fonksiyonlar
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function requestDemo() {
+            showNotification('📧 Demo talebiniz alındı! Kısa sürede sizinle iletişime geçeceğiz.', 'info');
+            closeModal('demoModal');
+        }
+
+        function showNotification(message, type = 'info') {
+            // Notification container oluştur
+            let container = document.querySelector('.notification-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.className = 'notification-container';
+                document.body.appendChild(container);
+            }
+
+            // Notification elementi oluştur
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                <span class="notification-message">${message}</span>
+                <button class="notification-close" onclick="this.parentElement.remove()">×</button>
+            `;
+
+            container.appendChild(notification);
+
+            // Otomatik kapat
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+
+        // Smooth scroll navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Desktop menu links
+            document.querySelectorAll('.desktop-menu a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu links
+            document.querySelectorAll('.mobile-nav-item[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Update active states on scroll
+            window.addEventListener('scroll', updateActiveNavigation);
+        });
+
+        function updateActiveNavigation() {
+            const sections = document.querySelectorAll('section[id], main[id]');
+            const navLinks = document.querySelectorAll('.desktop-menu a[href^="#"], .mobile-nav-item[href^="#"]');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    </script>
+
+    <!-- Ana JavaScript dosyası -->
     <script type="module" src="script.js?v=1.1"></script>
+
+    <!-- Modal CSS Stilleri -->
+    <style>
+        /* Modal Stilleri */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .full-width {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .demo-content {
+            text-align: center;
+        }
+
+        .demo-video-placeholder {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .video-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .demo-features {
+            text-align: left;
+            margin: 1.5rem 0;
+        }
+
+        .demo-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .demo-features li {
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        /* Notification Stilleri */
+        .notification-container {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1001;
+            max-width: 400px;
+        }
+
+        .notification {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #2563eb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            animation: slideInRight 0.3s ease-out;
+        }
+
+        .notification-success {
+            border-left-color: #10b981;
+        }
+
+        .notification-error {
+            border-left-color: #ef4444;
+        }
+
+        .notification-close {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #666;
+            margin-left: 1rem;
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Responsive Modal */
+        @media (max-width: 768px) {
+            .modal-content {
+                margin: 20% auto;
+                width: 95%;
+                padding: 1.5rem;
+            }
+            
+            .notification-container {
+                top: 1rem;
+                right: 1rem;
+                left: 1rem;
+                max-width: none;
+            }
+        }
+    </style>
 </body>
 </html>
