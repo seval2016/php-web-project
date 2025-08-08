@@ -1,3 +1,6 @@
+<!-- Slogan Banner Modülü -->
+<?php include 'slogan-banner.php'; ?>
+
 <!-- Ana Header -->
 <header class="main-header">
     <div class="container">

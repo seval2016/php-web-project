@@ -1,0 +1,209 @@
+/* Slogan Banner Modülü - Kompakt ve Şık */
+
+.slogan-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.5rem 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1001;
+    animation: slideDown 0.4s ease-out;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slogan-banner .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.slogan-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    gap: 1rem;
+}
+
+.slogan-text {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.slogan-icon {
+    font-size: 1rem;
+    animation: gentleBounce 2s ease-in-out infinite;
+}
+
+.slogan-main {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.slogan-sub {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.2rem 0.6rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.slogan-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.slogan-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.slogan-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.slogan-btn .btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.slogan-btn:hover .btn-icon {
+    transform: translateX(3px);
+}
+
+.slogan-close {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.slogan-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Basit Animasyonlar */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes gentleBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .slogan-banner .container {
+        padding: 0 0.8rem;
+    }
+    
+    .slogan-content {
+        flex-direction: column;
+        gap: 0.6rem;
+        text-align: center;
+    }
+    
+    .slogan-text {
+        justify-content: center;
+        gap: 0.6rem;
+    }
+    
+    .slogan-main {
+        font-size: 0.85rem;
+    }
+    
+    .slogan-sub {
+        font-size: 0.75rem;
+        padding: 0.15rem 0.5rem;
+    }
+    
+    .slogan-actions {
+        gap: 0.6rem;
+    }
+    
+    .slogan-btn {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slogan-banner {
+        padding: 0.4rem 0;
+    }
+    
+    .slogan-banner .container {
+        padding: 0 0.5rem;
+    }
+    
+    .slogan-text {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    
+    .slogan-main {
+        font-size: 0.8rem;
+    }
+    
+    .slogan-sub {
+        font-size: 0.7rem;
+    }
+    
+    .slogan-actions {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}

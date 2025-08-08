@@ -2,19 +2,19 @@
 
 /* Header için scroll efekti */
 body {
-    padding-top: 100px; /* Fixed header için alan */
+    padding-top: 120px; /* Fixed header + slogan banner için alan */
 }
 
 @media (max-width: 768px) {
     body {
-        padding-top: 120px; /* Mobilde daha fazla alan */
+        padding-top: 110px; /* Mobilde daha fazla alan */
         padding-bottom: 80px; /* Mobil alt navigasyon için alan */
     }
 }
 
 @media (max-width: 480px) {
     body {
-        padding-top: 110px;
+        padding-top: 100px;
         padding-bottom: 80px; /* Mobil alt navigasyon için alan */
     }
 }

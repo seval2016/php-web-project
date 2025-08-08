@@ -1,0 +1,180 @@
+# Destan Teknoloji Web Projesi - .gitignore
+
+# Sistem Dosyaları
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE ve Editör Dosyaları
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# Log Dosyaları
+*.log
+logs/
+error_log
+access_log
+
+# Cache ve Geçici Dosyalar
+cache/
+tmp/
+temp/
+*.tmp
+*.temp
+*.cache
+
+# Backup Dosyaları
+*.bak
+*.backup
+*.old
+*.orig
+
+# Config Dosyaları (Hassas Bilgiler)
+config.php
+database.php
+.env
+.env.local
+.env.production
+.env.staging
+
+# Upload Dosyaları
+uploads/
+user_uploads/
+images/uploads/
+
+# Database Dosyaları
+*.sql
+*.db
+*.sqlite
+
+# Composer (PHP)
+vendor/
+composer.lock
+
+# Node.js (Eğer kullanılırsa)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build Dosyaları
+dist/
+build/
+*.min.js
+*.min.css
+
+# Test Dosyaları
+tests/
+test/
+*.test.php
+*.spec.php
+
+# Documentation
+docs/
+documentation/
+
+# Backup Klasörleri
+backup/
+backups/
+
+# Session Dosyaları
+sessions/
+*.sess
+
+# PHP Hata Dosyaları
+php_errors.log
+php_fatal.log
+
+# XAMPP Özel Dosyaları
+xampp/
+htdocs/backup/
+
+# IDE Özel Dosyaları
+*.sublime-project
+*.sublime-workspace
+
+# OS Özel Dosyaları
+.DS_Store?
+ehthumbs.db
+Icon?
+
+# Windows Özel Dosyaları
+*.lnk
+
+# Linux Özel Dosyaları
+*~
+
+# Geçici Dosyalar
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Hassas Bilgiler İçeren Dosyalar
+secrets.php
+credentials.php
+api_keys.php
+passwords.txt
+
+# Debug Dosyaları
+debug.log
+debug.txt
+*.debug
+
+# Performance Dosyaları
+*.prof
+*.cache
+
+# SSL Sertifikaları
+*.pem
+*.key
+*.crt
+*.csr
+
+# Database Dumps
+*.sql.gz
+*.sql.bak
+*.dump
+
+# User Generated Content
+user_content/
+user_files/
+user_uploads/
+
+# Analytics ve Tracking
+analytics/
+tracking/
+stats/
+
+# Mail Dosyaları
+mail/
+emails/
+*.eml
+
+# Cron Job Logs
+cron.log
+cron_*.log
+
+# Server Logs
+server.log
+apache.log
+nginx.log
+
+# Development Dosyaları
+dev/
+development/
+*.dev.php
+*.local.php
+
+# Production Hazırlık
+production/
+staging/
+*.prod.php
+*.stage.php

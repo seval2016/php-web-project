@@ -1,10 +1,24 @@
 // Destan Teknoloji - Modüler JavaScript Yapısı v1.1
 
+// Slogan Banner Kapatma Fonksiyonu
+function closeSloganBanner() {
+    const banner = document.querySelector('.slogan-banner');
+    if (banner) {
+        banner.style.animation = 'slideUp 0.3s ease-out forwards';
+        setTimeout(() => {
+            banner.style.display = 'none';
+            // Header'ın top değerini güncelle
+            document.body.style.paddingTop = '80px';
+        }, 300);
+    }
+}
+
 // Modülleri import et
 import './script/mobile-menu.js';
 import './script/animations.js';
 import './script/navigation.js';
 import './script/products.js';
+import { SloganBanner } from './script/slogan-banner.js';
 
 // Ana uygulama sınıfı
 class DestanApp {

@@ -210,6 +210,10 @@
 
 .admin-icon {
     font-size: 1rem;
+    font-style: normal;
+    transform: none;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 .admin-text {
@@ -260,6 +264,10 @@
     font-size: 1.5rem;
     margin-bottom: 0.25rem;
     display: block;
+    font-style: normal;
+    transform: none;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 .mobile-nav-text {
