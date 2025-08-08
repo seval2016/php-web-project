@@ -1,4 +1,36 @@
-# Destan Teknoloji Web Projesi
+# 🚀 Destan Teknoloji Web Projesi
+
+Modern teknoloji ile güçlendirilmiş, yapay zeka destekli teknoloji çözümleri sunan kurumsal web sitesi.
+
+## 🌟 Özellikler
+
+- ✅ **PHP 8.1+ Desteği** - Modern PHP ile geliştirilmiş
+- ✅ **Vercel Deployment** - Serverless PHP runtime
+- ✅ **Responsive Tasarım** - Mobil uyumlu modern UI
+- ✅ **SEO Optimized** - Arama motoru dostu
+- ✅ **API Endpoints** - RESTful API yapısı
+- ✅ **Modüler Yapı** - Kolay geliştirme ve bakım
+
+## 🛠️ Teknolojiler
+
+- **Backend**: PHP 8.1+, Composer
+- **Frontend**: HTML5, CSS3, JavaScript ES6+
+- **Deployment**: Vercel
+- **API**: RESTful endpoints
+
+## 🚀 Demo
+
+Canlı demo: [https://destanteknoloji.vercel.app](https://destanteknoloji.vercel.app)
+
+## 📧 API Endpoints
+
+### Authentication
+- `POST /api/auth.php` - Giriş/Kayıt işlemleri
+
+### Contact
+- `POST /api/contact.php` - İletişim ve newsletter
+
+## 💼 Destan Teknoloji
 
 Modern ve modüler yapıda geliştirilmiş web sitesi projesi.
 
