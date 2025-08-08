@@ -1,10 +1,21 @@
-<!-- Ana İçerik -->
+<?php
+/**
+ * Ana İçerik Modülü - Site Ana Bölümü
+ * 
+ * Bu dosya sitenin ana içeriğini oluşturur.
+ * Ürünler bölümü, neden biz bölümü ve newsletter bölümünü içerir.
+ * Title modülü kullanarak tutarlı başlık stilleri sağlar.
+ */
+
+// Ana İçerik - Site ana bölümü
+?>
+<!-- Ana İçerik - Site ana bölümü -->
 <main class="main-content">
     <div class="container">
-        <!-- Ürünler Bölümü -->
+        <!-- Ürünler Bölümü - Ürün kartları ve açıklamaları -->
         <?php include 'products.php'; ?>
 
-        <!-- Neden Destan Teknoloji? Bölümü -->
+        <!-- Neden Destan Teknoloji? Bölümü - Özellikler ve avantajlar -->
         <section class="why-destan-section">
             <div class="section-header">
                 <div class="section-badge">Neden Biz?</div>
@@ -12,7 +23,9 @@
                 <p class="section-subtitle">Yapay zeka destekli çözümlerle işinizi büyütün</p>
             </div>
             
+            <!-- Özellikler Grid - 6 adet özellik kartı -->
             <div class="features-grid">
+                <!-- Hızlı Kurulum Kartı -->
                 <div class="feature-card">
                     <div class="feature-icon-wrapper">
                         <div class="feature-icon">🚀</div>
@@ -28,6 +41,7 @@
                     </div>
                 </div>
                 
+                <!-- Güvenli Altyapı Kartı -->
                 <div class="feature-card">
                     <div class="feature-icon-wrapper">
                         <div class="feature-icon">🛡️</div>
@@ -43,6 +57,7 @@
                     </div>
                 </div>
                 
+                <!-- Yapay Zeka Destekli Kartı -->
                 <div class="feature-card">
                     <div class="feature-icon-wrapper">
                         <div class="feature-icon">🤖</div>
@@ -58,6 +73,7 @@
                     </div>
                 </div>
                 
+                <!-- 7/24 Destek Kartı -->
                 <div class="feature-card">
                     <div class="feature-icon-wrapper">
                         <div class="feature-icon">📞</div>
@@ -73,6 +89,7 @@
                     </div>
                 </div>
                 
+                <!-- Detaylı Raporlama Kartı -->
                 <div class="feature-card">
                     <div class="feature-icon-wrapper">
                         <div class="feature-icon">📊</div>
@@ -88,6 +105,7 @@
                     </div>
                 </div>
                 
+                <!-- Uygun Fiyat Kartı -->
                 <div class="feature-card">
                     <div class="feature-icon-wrapper">
                         <div class="feature-icon">💰</div>
@@ -105,7 +123,7 @@
             </div>
         </section>
 
-        <!-- Newsletter Bölümü -->
+        <!-- Newsletter Bölümü - E-posta abonelik formu -->
         <?php include 'newsletter.php'; ?>
     </div>
 </main>

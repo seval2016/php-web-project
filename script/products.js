@@ -1,8 +1,25 @@
-// Ürün Kartları Modülü
+/**
+ * Ürün Kartları Modülü - Ürün Etkileşim Yönetimi
+ * 
+ * Bu dosya ürün kartlarının JavaScript işlevselliğini yönetir.
+ * Hover efektleri, modal gösterimi, iletişim butonları ve analytics tracking sağlar.
+ * Kullanıcı deneyimini artırmak için interaktif özellikler içerir.
+ */
+
+/**
+ * Products Sınıfı - Ürün Kartları Yönetimi
+ * 
+ * Bu sınıf ürün kartlarının tüm işlevselliğini yönetir.
+ * Hover efektleri, modal gösterimi, iletişim işlemleri ve analytics tracking sağlar.
+ */
 class Products {
+    /**
+     * Constructor - Sınıf başlatıldığında çalışır
+     * Ürün kartlarını bulur ve modülü başlatır
+     */
     constructor() {
-        this.productCards = document.querySelectorAll('.product-card');
-        this.init();
+        this.productCards = document.querySelectorAll('.product-card');  // Ürün kartları
+        this.init();  // Modülü başlat
     }
     
     init() {

@@ -100,6 +100,7 @@
                     </ul>
                 </div>
                 
+                <!-- Hizmetler Bölümü -->
                 <div class="footer-section">
                     <h4 class="footer-title">Hizmetler</h4>
                     <ul class="footer-list">
@@ -110,6 +111,7 @@
                     </ul>
                 </div>
                 
+                <!-- Şirket Bölümü -->
                 <div class="footer-section">
                     <h4 class="footer-title">Şirket</h4>
                     <ul class="footer-list">
@@ -120,6 +122,7 @@
                     </ul>
                 </div>
                 
+                <!-- Destek Bölümü -->
                 <div class="footer-section">
                     <h4 class="footer-title">Destek</h4>
                     <ul class="footer-list">
@@ -132,10 +135,13 @@
             </div>
         </div>
         
-        <!-- Footer Alt Kısmı -->
+        <!-- Footer Alt Kısmı - Telif hakkı ve yasal linkler -->
         <div class="footer-bottom">
             <div class="footer-bottom-content">
+                <!-- Telif hakkı bilgisi -->
                 <p class="copyright">&copy; 2025 Destan Teknoloji. Tüm hakları saklıdır.</p>
+                
+                <!-- Yasal linkler - Gizlilik, kullanım şartları, çerez politikası -->
                 <div class="footer-legal">
                     <a href="#privacy">Gizlilik Politikası</a>
                     <a href="#terms">Kullanım Şartları</a>

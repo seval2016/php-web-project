@@ -1,9 +1,26 @@
-// Navigasyon Modülü
+/**
+ * Navigasyon Modülü - Menü Yönetimi ve Smooth Scroll
+ * 
+ * Bu dosya ana navigasyon menüsünün JavaScript işlevselliğini yönetir.
+ * Smooth scroll, aktif menü takibi, URL güncelleme ve performans optimizasyonu sağlar.
+ * Kullanıcı deneyimini artırmak için interaktif navigasyon özellikleri içerir.
+ */
+
+/**
+ * Navigation Sınıfı - Ana Navigasyon Yönetimi
+ * 
+ * Bu sınıf ana navigasyon menüsünün tüm işlevselliğini yönetir.
+ * Smooth scroll, aktif menü takibi, URL güncelleme ve performans optimizasyonu sağlar.
+ */
 class Navigation {
+    /**
+     * Constructor - Sınıf başlatıldığında çalışır
+     * Menü linklerini bulur ve modülü başlatır
+     */
     constructor() {
-        this.menuLinks = document.querySelectorAll('.menu a');
-        this.currentActiveItem = null;
-        this.init();
+        this.menuLinks = document.querySelectorAll('.menu a');  // Menü linkleri
+        this.currentActiveItem = null;  // Aktif menü öğesi
+        this.init();  // Modülü başlat
     }
     
     init() {
