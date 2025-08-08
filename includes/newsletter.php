@@ -1,10 +1,6 @@
 <?php
 /**
  * Newsletter Modülü - E-posta Abonelik Formu
- * 
- * Bu dosya e-posta abonelik formunu oluşturur.
- * Kullanıcıların teknoloji haberleri ve güncellemeler için abone olmasını sağlar.
- * Responsive tasarım ile mobil uyumlu form yapısı.
  */
 
 // Newsletter Bölümü - E-posta abonelik formu

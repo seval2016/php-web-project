@@ -1,10 +1,6 @@
 <?php
 /**
  * Login Sayfası - Kullanıcı Giriş İşlemleri
- * 
- * Bu dosya kullanıcıların sisteme giriş yapmasını sağlar.
- * Demo kullanıcı bilgileri ile giriş yapılabilir.
- * Başarılı giriş sonrası admin paneline yönlendirme yapar.
  */
 
 // Hata ve başarı mesajları için değişkenler

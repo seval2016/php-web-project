@@ -1,10 +1,6 @@
 <?php
 /**
  * Logout Sayfası - Kullanıcı Çıkış Arayüzü
- * 
- * Bu dosya kullanıcıların çıkış işlemi sırasında göreceği arayüzü sağlar.
- * JavaScript ile AJAX kullanarak güvenli çıkış işlemi yapar.
- * Kullanıcıya loading animasyonu gösterir ve ana sayfaya yönlendirir.
  */
 
 // Çıkış mesajı - kullanıcıya gösterilecek metin

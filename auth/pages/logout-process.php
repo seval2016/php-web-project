@@ -1,10 +1,6 @@
 <?php
 /**
  * Logout İşlemi - Kullanıcı Çıkış İşlemleri
- * 
- * Bu dosya kullanıcıların sistemden güvenli şekilde çıkış yapmasını sağlar.
- * AJAX istekleri için JSON formatında yanıt döner.
- * Session verilerini tamamen temizler ve güvenli çıkış yapar.
  */
 
 // AJAX istekleri için JSON content type ayarla

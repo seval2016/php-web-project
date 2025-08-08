@@ -1,12 +1,4 @@
 /**
- * Slogan Banner Modülü - Dinamik Banner Yönetimi
- * 
- * Bu dosya slogan banner'ının JavaScript işlevselliğini yönetir.
- * Banner'ı açma, kapama, içerik güncelleme ve animasyon işlemlerini sağlar.
- * localStorage ile kullanıcı tercihlerini hatırlar.
- */
-
-/**
  * SloganBanner Sınıfı - Ana Banner Yönetim Sınıfı
  * 
  * Bu sınıf slogan banner'ının tüm işlevselliğini yönetir.

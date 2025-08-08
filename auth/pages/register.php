@@ -1,10 +1,6 @@
 <?php
 /**
  * Register Sayfası - Kullanıcı Kayıt İşlemleri
- * 
- * Bu dosya kullanıcıların sisteme kayıt olmasını sağlar.
- * Form validasyonu yapar ve güvenli kayıt işlemi gerçekleştirir.
- * Başarılı kayıt sonrası giriş sayfasına yönlendirme yapar.
  */
 
 // Hata ve başarı mesajları için değişkenler

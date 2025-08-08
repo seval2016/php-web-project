@@ -1,10 +1,6 @@
 <?php
 /**
  * Ana İçerik Modülü - Site Ana Bölümü
- * 
- * Bu dosya sitenin ana içeriğini oluşturur.
- * Ürünler bölümü, neden biz bölümü ve newsletter bölümünü içerir.
- * Title modülü kullanarak tutarlı başlık stilleri sağlar.
  */
 
 // Ana İçerik - Site ana bölümü

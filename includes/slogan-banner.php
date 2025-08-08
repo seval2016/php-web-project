@@ -1,10 +1,6 @@
 <?php
 /**
  * Slogan Banner Modülü - Dinamik Banner Sistemi
- * 
- * Bu dosya header içerisinde include edilecek dinamik banner sistemidir.
- * Kullanıcıya özel mesajlar, kampanyalar ve çağrı-to-action butonları gösterir.
- * JavaScript ile kapatılabilir ve localStorage'da durumu saklanır.
  */
 
 // Slogan ayarları - Banner içeriği ve davranışı

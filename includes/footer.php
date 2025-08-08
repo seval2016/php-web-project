@@ -1,14 +1,4 @@
-<?php
-/**
- * Footer Modülü - Site Alt Kısmı
- * 
- * Bu dosya sitenin alt kısmını oluşturur.
- * İletişim bilgileri, sosyal medya linkleri, ürün/hizmet linkleri ve yasal bilgiler içerir.
- * Responsive tasarım ile mobil uyumlu footer yapısı.
- */
 
-// Footer - Site alt kısmı
-?>
 <!-- Footer - Site alt kısmı -->
 <footer class="main-footer">
     <div class="container">

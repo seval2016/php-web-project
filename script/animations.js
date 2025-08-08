@@ -1,14 +1,5 @@
 /**
- * Animasyonlar Modülü - Sayfa Animasyon Yönetimi
- * 
- * Bu dosya sayfadaki tüm animasyonları yönetir.
- * Intersection Observer, loading animasyonları, hover efektleri ve smooth scroll sağlar.
- * Kullanıcı deneyimini artırmak için görsel efektler içerir.
- */
-
-/**
  * Animations Sınıfı - Animasyon Yönetimi
- * 
  * Bu sınıf sayfadaki tüm animasyonları yönetir.
  * Intersection Observer, loading animasyonları, hover efektleri ve smooth scroll sağlar.
  */
@@ -49,7 +40,7 @@ class Animations {
     
     setupLoadingAnimation() {
         window.addEventListener('load', () => {
-            // Loading animasyonunu kaldır
+            // Loading animasyonunu kaldırma işlemi
             const loader = document.querySelector('.loader');
             if (loader) {
                 loader.style.opacity = '0';

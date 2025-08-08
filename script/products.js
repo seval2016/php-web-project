@@ -1,12 +1,4 @@
 /**
- * Ürün Kartları Modülü - Ürün Etkileşim Yönetimi
- * 
- * Bu dosya ürün kartlarının JavaScript işlevselliğini yönetir.
- * Hover efektleri, modal gösterimi, iletişim butonları ve analytics tracking sağlar.
- * Kullanıcı deneyimini artırmak için interaktif özellikler içerir.
- */
-
-/**
  * Products Sınıfı - Ürün Kartları Yönetimi
  * 
  * Bu sınıf ürün kartlarının tüm işlevselliğini yönetir.

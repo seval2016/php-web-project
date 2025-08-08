@@ -1,10 +1,6 @@
 <?php
 /**
  * Header Modülü - Site Üst Kısmı
- * 
- * Bu dosya sitenin üst kısmını oluşturur.
- * Logo, navigasyon menüsü, giriş/üye ol butonları ve mobil alt navigasyon içerir.
- * Auth sayfalarında farklı yollar kullanır.
  */
 
 // Slogan Banner Modülü - Dinamik banner sistemi

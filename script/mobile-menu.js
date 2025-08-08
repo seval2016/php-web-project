@@ -1,12 +1,4 @@
 /**
- * Mobil Alt Navigasyon Modülü - Mobil Menü Yönetimi
- * 
- * Bu dosya mobil cihazlarda alt navigasyon menüsünün işlevselliğini yönetir.
- * Scroll takibi, aktif item güncelleme ve smooth scroll işlemlerini sağlar.
- * Responsive tasarım ile sadece mobil cihazlarda aktif olur.
- */
-
-/**
  * MobileBottomNav Sınıfı - Mobil Alt Navigasyon Yönetimi
  * 
  * Bu sınıf mobil alt navigasyon menüsünün tüm işlevselliğini yönetir.
@@ -37,7 +29,6 @@ class MobileBottomNav {
     
     /**
      * Event Listener'ları Ayarla - Kullanıcı etkileşimlerini dinler
-     * 
      * Navigasyon itemlarına tıklama ve scroll olaylarını dinler.
      * Throttled scroll takibi ile performans optimizasyonu sağlar.
      */

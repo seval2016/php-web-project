@@ -1,10 +1,6 @@
 <?php
 /**
  * Ürünler Modülü - Ürün Kartları ve Fiyatlandırma
- * 
- * Bu dosya sitenin ürünler bölümünü oluşturur.
- * Title modülü kullanarak tutarlı başlık stilleri sağlar.
- * 3 adet ürün paketi: E-Ticaret, Muhasebe ve AI Destekli.
  */
 
 // Ürünler Bölümü - Ürün kartları ve fiyatlandırma

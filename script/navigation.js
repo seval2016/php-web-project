@@ -1,12 +1,4 @@
 /**
- * Navigasyon Modülü - Menü Yönetimi ve Smooth Scroll
- * 
- * Bu dosya ana navigasyon menüsünün JavaScript işlevselliğini yönetir.
- * Smooth scroll, aktif menü takibi, URL güncelleme ve performans optimizasyonu sağlar.
- * Kullanıcı deneyimini artırmak için interaktif navigasyon özellikleri içerir.
- */
-
-/**
  * Navigation Sınıfı - Ana Navigasyon Yönetimi
  * 
  * Bu sınıf ana navigasyon menüsünün tüm işlevselliğini yönetir.
