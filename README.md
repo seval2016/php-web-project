@@ -9,21 +9,27 @@ destan-web-proje/
 ├── index.php              # Ana sayfa (modüler yapı)
 ├── style.css              # Ana CSS dosyası (modülleri import eder)
 ├── script.js              # Ana JavaScript dosyası (modülleri import eder)
+├── check-css.php          # CSS dosya kontrolü ve debug aracı
+├── .gitignore             # Git ignore dosyası
+├── .vscode/               # VS Code ayarları
 ├── assets/
-│   └── images/
-│       └── logo.png       # Logo dosyası
+│   ├── images/
+│   │   └── logo.png       # Logo dosyası
+│   └── favicon.ico        # Site favicon'u
 ├── includes/              # PHP Modüler dosyalar
 │   ├── header.php         # Header bölümü
 │   ├── main-content.php   # Ana içerik
 │   ├── products.php       # Ürünler bölümü
 │   ├── newsletter.php     # Newsletter bölümü
+│   ├── slogan-banner.php  # Slogan banner modülü
 │   └── footer.php         # Footer bölümü
 ├── auth/                  # Kimlik doğrulama modülü
 │   ├── index.php          # Auth router (login, register, logout)
 │   ├── pages/             # Auth sayfaları
 │   │   ├── login.php      # Giriş sayfası
 │   │   ├── register.php   # Kayıt sayfası
-│   │   └── logout.php     # Çıkış işlemi
+│   │   ├── logout.php     # Çıkış sayfası
+│   │   └── logout-process.php # Çıkış işlemi
 │   ├── auth.css           # Auth stilleri
 │   └── auth.js            # Auth JavaScript
 ├── admin/                 # Admin paneli modülü
@@ -36,16 +42,20 @@ destan-web-proje/
 │   ├── header.css         # Header stilleri
 │   ├── buttons.css        # Buton stilleri
 │   ├── main-content.css   # Ana içerik stilleri
+│   ├── title.css          # Title modülü (section başlıkları)
 │   ├── newsletter.css     # Newsletter stilleri
 │   ├── footer.css         # Footer stilleri
 │   ├── forms.css          # Form stilleri
+│   ├── slogan-banner.css  # Slogan banner stilleri
 │   ├── responsive.css     # Responsive tasarım
-│   └── animations.css     # Animasyonlar
+│   ├── animations.css     # Animasyonlar
+│   └── README-title-module.md # Title modülü dokümantasyonu
 └── script/                # JavaScript Modüler dosyalar
     ├── mobile-menu.js     # Mobil menü modülü
     ├── animations.js      # Animasyonlar modülü
     ├── navigation.js      # Navigasyon modülü
-    └── products.js        # Ürün kartları modülü
+    ├── products.js        # Ürün kartları modülü
+    └── slogan-banner.js   # Slogan banner modülü
 ```
 
 ## 🚀 Özellikler
@@ -56,6 +66,10 @@ destan-web-proje/
 - **Modern JavaScript**: ES6+ Modules, Classes, Intersection Observer
 - **Animasyonlar**: Smooth scroll, hover efektleri, loading animasyonları
 - **SEO Optimizasyonu**: Meta tags, semantic HTML yapısı
+- **Title Modülü**: Section başlıkları için tutarlı tasarım sistemi
+- **Slogan Banner**: Dinamik banner sistemi
+- **Debug Araçları**: CSS dosya kontrolü ve debug araçları
+- **VS Code Desteği**: Proje ayarları ve konfigürasyonu
 
 ## 🛠️ Teknolojiler
 
@@ -102,19 +116,27 @@ destan-web-proje/
 - Logo, slogan ve navigasyon
 - Desktop ve mobil menü
 - Giriş/Üye ol butonları
+- Slogan banner entegrasyonu
 
 #### `includes/main-content.php`
 - Ana içerik wrapper
 - Kullanıcı panel butonu
 - Ürünler ve özellikler bölümleri
+- Title modülü kullanımı
 
 #### `includes/products.php`
 - Ürün kartları
 - E-ticaret, muhasebe, AI paketleri
+- Title modülü kullanımı
 
 #### `includes/newsletter.php`
 - Newsletter abonelik formu
 - "Güncel Kalın" bölümü
+
+#### `includes/slogan-banner.php`
+- Dinamik slogan banner
+- Konfigürasyon sistemi
+- Kapatma butonu desteği
 
 #### `includes/footer.php`
 - İletişim bilgileri
@@ -145,6 +167,13 @@ destan-web-proje/
 - Ürün kartları ve grid sistemi
 - Feature items ve bilgilendirme bölümü
 - Kullanıcı panel butonu
+- Title modülü import
+
+#### `style/title.css`
+- Section başlıkları için tutarlı tasarım
+- Section badge, title, subtitle stilleri
+- Responsive font boyutları
+- Highlight efektleri
 
 #### `style/newsletter.css`
 - Newsletter gradient background
@@ -157,6 +186,18 @@ destan-web-proje/
 - İletişim bilgileri kartları
 - Sosyal medya ikonları
 - Footer linkleri ve copyright
+
+#### `style/forms.css`
+- Form input stilleri
+- Validation mesajları
+- Focus states ve transitions
+- Responsive form tasarımı
+
+#### `style/slogan-banner.css`
+- Slogan banner stilleri
+- Slide animasyonları
+- Responsive banner tasarımı
+- Close button stilleri
 
 #### `style/responsive.css`
 - Tüm responsive breakpoint'ler
@@ -196,11 +237,19 @@ destan-web-proje/
 - WhatsApp iletişim entegrasyonu
 - Analytics tracking
 
+#### `script/slogan-banner.js`
+- Slogan banner kontrolü
+- Dinamik içerik güncelleme
+- ESC tuşu ile kapatma
+- Slide animasyonları
+
 ## 🔧 Kurulum
 
 1. Dosyaları web sunucusuna yükleyin
 2. `assets/images/` klasörüne logo dosyasını ekleyin
-3. Tarayıcıda `index.php` dosyasını açın
+3. `assets/favicon.ico` dosyasını ekleyin
+4. Tarayıcıda `index.php` dosyasını açın
+5. CSS dosyalarını kontrol etmek için `check-css.php` dosyasını çalıştırın
 
 ## 📝 Geliştirme Notları
 
@@ -210,11 +259,19 @@ destan-web-proje/
 - **Modern CSS**: CSS Variables ve @import kullanımı
 - **Modern JavaScript**: ES6+ Modules ve Classes kullanımı
 - **Performans**: Modüler yapı sayesinde sadece gerekli kod yükleniyor
+- **Title Modülü**: Section başlıkları için tutarlı tasarım sistemi
+- **Slogan Banner**: Dinamik banner sistemi ile kolay içerik yönetimi
+- **Debug Araçları**: CSS dosya kontrolü ve debug araçları
+- **VS Code Desteği**: Proje ayarları ve konfigürasyonu
 
 ## 🎯 Gelecek Geliştirmeler
 
 - [x] Database entegrasyonu
 - [x] Admin paneli
+- [x] Title modülü sistemi
+- [x] Slogan banner sistemi
+- [x] Debug araçları
+- [x] VS Code desteği
 - [ ] Blog sistemi
 - [ ] E-ticaret entegrasyonu
 - [ ] API geliştirme
@@ -223,6 +280,62 @@ destan-web-proje/
 - [ ] CSS minification ve optimization
 - [ ] JavaScript bundling (Webpack/Vite)
 - [ ] Service Worker ile PWA desteği
+- [ ] Dark mode desteği
+- [ ] Performance monitoring
+- [ ] Automated testing
+
+## 🛠️ Geliştirme Araçları
+
+### Debug ve Kontrol Araçları
+
+#### `check-css.php`
+- CSS dosyalarının varlık kontrolü
+- Dosya boyutları ve son değişiklik tarihleri
+- CSS içerik kontrolü
+- Debug ve troubleshooting için kullanılır
+
+### VS Code Desteği
+- `.vscode/` klasöründe proje ayarları
+- Kod formatlaması ve linting
+- Debug konfigürasyonu
+- Extension önerileri
+
+### Git Yapılandırması
+- `.gitignore` dosyası ile gereksiz dosyaların hariç tutulması
+- Proje yapısının korunması
+- Güvenli dosya yönetimi
+
+## 📚 Dokümantasyon
+
+### Title Modülü
+- `style/README-title-module.md` - Title modülü kullanım kılavuzu
+- Section başlıkları için tutarlı tasarım sistemi
+- Responsive font boyutları
+- Highlight efektleri
+
+### Modül Kullanımı
+- Her modül kendi dokümantasyonuna sahip
+- Import/export yapıları
+- Konfigürasyon seçenekleri
+- Örnek kullanımlar
+
+## 🔍 Proje Kontrolü
+
+### Dosya Yapısı Kontrolü
+```bash
+# CSS dosyalarını kontrol et
+php check-css.php
+
+# Proje yapısını kontrol et
+tree -I 'node_modules|.git'
+```
+
+### Modül Durumu
+- ✅ Title modülü aktif
+- ✅ Slogan banner sistemi çalışıyor
+- ✅ Responsive tasarım uyumlu
+- ✅ JavaScript modülleri yüklü
+- ✅ CSS modülleri import edilmiş
 
 ## 📞 İletişim
 

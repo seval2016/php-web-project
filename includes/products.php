@@ -1,6 +1,11 @@
 <!-- Ürünler Bölümü -->
 <section id="products" class="products-section">
-    <h2 class="section-title">Ürünlerimiz</h2>
+    <div class="section-header">
+        <div class="section-badge">Çözümlerimiz</div>
+        <h2 class="section-title">Ürünlerimiz</h2>
+        <p class="section-subtitle">İşinizi büyütecek profesyonel çözümler</p>
+    </div>
+    
     <div class="products-grid">
         <div class="product-card" data-product="E-Ticaret Paketi">
             <div class="product-icon">🛒</div>

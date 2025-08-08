@@ -4,25 +4,102 @@
         <!-- Ürünler Bölümü -->
         <?php include 'products.php'; ?>
 
-        <!-- Bilgilendirme Bölümü -->
-        <section class="info-section">
-            <div class="info-content">
-                <h2>Neden Destan Teknoloji?</h2>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">⚡</div>
+        <!-- Neden Destan Teknoloji? Bölümü -->
+        <section class="why-destan-section">
+            <div class="section-header">
+                <div class="section-badge">Neden Biz?</div>
+                <h2 class="section-title">Neden Destan Teknoloji?</h2>
+                <p class="section-subtitle">Yapay zeka destekli çözümlerle işinizi büyütün</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">🚀</div>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="feature-content">
                         <h3>Hızlı Kurulum</h3>
-                        <p>5 dakikada sisteminizi kurun</p>
+                        <p>5 dakikada sisteminizi kurun ve hemen kullanmaya başlayın. Teknik bilgi gerektirmez.</p>
+                        <div class="feature-stats">
+                            <span class="stat">5 dk</span>
+                            <span class="stat-label">Kurulum</span>
+                        </div>
                     </div>
-                    <div class="feature-item">
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
                         <div class="feature-icon">🛡️</div>
-                        <h3>Güvenli Altyapı</h3>
-                        <p>SSL sertifikalı güvenli sistem</p>
+                        <div class="icon-bg"></div>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-content">
+                        <h3>Güvenli Altyapı</h3>
+                        <p>SSL sertifikalı, ISO 27001 uyumlu güvenlik standartları ile verileriniz güvende.</p>
+                        <div class="feature-stats">
+                            <span class="stat">%99.9</span>
+                            <span class="stat-label">Uptime</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">🤖</div>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Yapay Zeka Destekli</h3>
+                        <p>AI teknolojileri ile otomatik süreçler, akıllı analizler ve tahmin modelleri.</p>
+                        <div class="feature-stats">
+                            <span class="stat">AI</span>
+                            <span class="stat-label">Destekli</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
                         <div class="feature-icon">📞</div>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="feature-content">
                         <h3>7/24 Destek</h3>
-                        <p>Uzman kadromuz her zaman yanınızda</p>
+                        <p>Uzman kadromuz her zaman yanınızda. Canlı destek, telefon ve e-posta ile ulaşın.</p>
+                        <div class="feature-stats">
+                            <span class="stat">24/7</span>
+                            <span class="stat-label">Destek</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">📊</div>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Detaylı Raporlama</h3>
+                        <p>Gerçek zamanlı dashboard, özelleştirilebilir raporlar ve performans analizleri.</p>
+                        <div class="feature-stats">
+                            <span class="stat">Real-time</span>
+                            <span class="stat-label">Raporlar</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">💰</div>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Uygun Fiyat</h3>
+                        <p>Küçük işletmeler için uygun fiyatlar, büyük kurumlar için kurumsal çözümler.</p>
+                        <div class="feature-stats">
+                            <span class="stat">%40</span>
+                            <span class="stat-label">Tasarruf</span>
+                        </div>
                     </div>
                 </div>
             </div>

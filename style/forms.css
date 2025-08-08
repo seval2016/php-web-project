@@ -69,6 +69,18 @@
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
+/* Şifre gücü uyarılarını gizle */
+.form-group input[type="password"]::-webkit-validation-bubble-message,
+.form-group input[type="password"]::-webkit-validation-bubble-arrow,
+.form-group input[type="password"]::-webkit-validation-bubble {
+    display: none !important;
+}
+
+/* Tarayıcı şifre gücü uyarılarını gizle */
+.form-group input[type="password"]:invalid {
+    box-shadow: none;
+}
+
 /* Form butonları */
 .login-form .btn,
 .register-form .btn {

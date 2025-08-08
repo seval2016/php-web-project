@@ -1,15 +1,27 @@
-<!-- Footer -->
+<?php
+/**
+ * Footer Modülü - Site Alt Kısmı
+ * 
+ * Bu dosya sitenin alt kısmını oluşturur.
+ * İletişim bilgileri, sosyal medya linkleri, ürün/hizmet linkleri ve yasal bilgiler içerir.
+ * Responsive tasarım ile mobil uyumlu footer yapısı.
+ */
+
+// Footer - Site alt kısmı
+?>
+<!-- Footer - Site alt kısmı -->
 <footer class="main-footer">
     <div class="container">
-        <!-- Ana Footer İçeriği -->
+        <!-- Ana Footer İçeriği - Üst kısım -->
         <div class="footer-main">
-            <!-- Sol: Marka ve İletişim -->
+            <!-- Sol taraf: Marka ve İletişim Bilgileri -->
             <div class="footer-brand">
+                <!-- Marka bölümü - Logo ve açıklama -->
                 <div class="brand-section">
                     <h3 class="footer-logo">Destan Teknoloji</h3>
                     <p class="footer-description">Geleceğin teknolojisi bugün. Yapay zeka ile güçlenen çözümlerle işletmenizi dijitalleştirin.</p>
                     
-                    <!-- İletişim Bilgileri -->
+                    <!-- İletişim Bilgileri - Email, telefon, adres -->
                     <div class="contact-info">
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -47,7 +59,7 @@
                     </div>
                 </div>
                 
-                <!-- Sosyal Medya -->
+                <!-- Sosyal Medya Bölümü - Sosyal medya linkleri -->
                 <div class="social-section">
                     <h4 class="social-title">Bizi Takip Edin</h4>
                     <div class="footer-social">
@@ -75,8 +87,9 @@
                 </div>
             </div>
             
-            <!-- Sağ: Linkler -->
+            <!-- Sağ taraf: Footer Linkleri - Ürün, hizmet, şirket ve destek linkleri -->
             <div class="footer-links">
+                <!-- Ürünler Bölümü -->
                 <div class="footer-section">
                     <h4 class="footer-title">Ürünler</h4>
                     <ul class="footer-list">
