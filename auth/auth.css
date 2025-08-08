@@ -1,0 +1,195 @@
+/* Auth Modülü CSS Stilleri */
+
+/* Auth Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem 0;
+}
+
+/* Form Stilleri */
+.login-form,
+.register-form {
+    max-width: 500px;
+    width: 100%;
+    padding: 2.5rem;
+    background: var(--bg-white);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+}
+
+/* Form başlıkları */
+.login-form h2,
+.register-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+/* Alert mesajları */
+.alert {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.alert-success {
+    background-color: #f0fdf4;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+}
+
+/* Form grupları */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--bg-white);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Form yardım metni */
+.form-help {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+/* Checkbox stilleri */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-label a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.checkbox-label a:hover {
+    text-decoration: underline;
+}
+
+/* Form butonları */
+.login-form .btn,
+.register-form .btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.875rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-form .btn:hover,
+.register-form .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+/* Auth linkleri */
+.auth-links {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.auth-links p {
+    margin: 0.5rem 0;
+    color: var(--text-light);
+}
+
+.auth-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.auth-links a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Demo bilgi kutusu */
+.demo-info {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    font-size: 0.875rem;
+}
+
+.demo-info p {
+    margin: 0.25rem 0;
+    color: var(--text-light);
+}
+
+.demo-info strong {
+    color: var(--text-dark);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 1rem;
+    }
+    
+    .login-form,
+    .register-form {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form,
+    .register-form {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+}

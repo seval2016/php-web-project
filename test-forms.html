@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Test - Destan Teknoloji</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Test için ek stiller */
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .test-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .test-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <!-- Login Form Test -->
+        <div class="login-form">
+            <h2>Giriş Yap</h2>
+            <form>
+                <div class="form-group">
+                    <label for="email">E-posta</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Giriş Yap</button>
+            </form>
+            <p>Hesabınız yok mu? <a href="register.php">Üye Ol</a></p>
+        </div>
+
+        <!-- Register Form Test -->
+        <div class="register-form">
+            <h2>Üye Ol</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Ad Soyad</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email2">E-posta</label>
+                    <input type="email" id="email2" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password2">Şifre</label>
+                    <input type="password" id="password2" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Şifre Tekrar</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Üye Ol</button>
+            </form>
+            <p>Zaten hesabınız var mı? <a href="login.php">Giriş Yap</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Form test fonksiyonları
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Form test sayfası yüklendi');
+            
+            // Form submit olaylarını yakala
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    console.log('Form gönderildi:', form);
+                    alert('Form test başarılı! CSS stilleri çalışıyor.');
+                });
+            });
+            
+            // Input focus olaylarını test et
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    console.log('Input focus:', this.name);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

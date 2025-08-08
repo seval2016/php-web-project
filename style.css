@@ -1,0 +1,28 @@
+/* Destan Teknoloji - Modüler CSS Yapısı */
+
+/* Temel Ayarlar */
+@import url('style/base.css');
+
+/* Header Stilleri */
+@import url('style/header.css');
+
+/* Buton Stilleri */
+@import url('style/buttons.css');
+
+/* Ana İçerik Stilleri */
+@import url('style/main-content.css');
+
+/* Newsletter Stilleri */
+@import url('style/newsletter.css');
+
+/* Footer Stilleri */
+@import url('style/footer.css');
+
+/* Responsive Tasarım */
+@import url('style/responsive.css');
+
+/* Animasyonlar */
+@import url('style/animations.css');
+
+/* Form Stilleri */
+@import url('style/forms.css');

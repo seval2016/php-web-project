@@ -1,0 +1,141 @@
+/* Responsive Tasarım */
+
+/* Header için scroll efekti */
+body {
+    padding-top: 100px; /* Fixed header için alan */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Mobilde daha fazla alan */
+        padding-bottom: 80px; /* Mobil alt navigasyon için alan */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 110px;
+        padding-bottom: 80px; /* Mobil alt navigasyon için alan */
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer Responsive */
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .footer-brand {
+        max-width: none;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .newsletter-section-main .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .newsletter-section-main .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .newsletter-section-main .newsletter-input {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .footer-legal {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .product-card {
+        padding: 1.5rem;
+    }
+    
+    .info-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    /* Footer Mobile */
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .newsletter-section-main {
+        padding: 2rem 1rem;
+        margin: 2rem 0;
+    }
+    
+    .newsletter-section-main .newsletter-content {
+        gap: 1.5rem;
+    }
+    
+    .newsletter-section-main .newsletter-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .newsletter-section-main .newsletter-text p {
+        font-size: 1rem;
+    }
+    
+    .newsletter-section-main .newsletter-form {
+        max-width: 100%;
+        flex-direction: column;
+    }
+    
+    .newsletter-section-main .newsletter-input {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .contact-item {
+        padding: 0.5rem;
+    }
+    
+    .contact-icon {
+        width: 28px;
+        height: 28px;
+    }
+}

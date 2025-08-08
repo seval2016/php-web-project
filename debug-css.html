@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Debug - Destan Teknoloji</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Debug Sayfası</h1>
+        
+        <div class="debug-section">
+            <h2>CSS Variables Test</h2>
+            <div style="background: var(--primary-color); color: white; padding: 1rem; margin: 1rem 0; border-radius: 0.5rem;">
+                Primary Color Test
+            </div>
+            <div style="background: var(--secondary-color); color: white; padding: 1rem; margin: 1rem 0; border-radius: 0.5rem;">
+                Secondary Color Test
+            </div>
+        </div>
+
+        <div class="debug-section">
+            <h2>Form Stilleri Test</h2>
+            <div class="login-form">
+                <h2>Login Form Test</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="test-email">E-posta</label>
+                        <input type="email" id="test-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="test-password">Şifre</label>
+                        <input type="password" id="test-password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Test Butonu</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="debug-section">
+            <h2>Buton Stilleri Test</h2>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-outline">Outline Button</button>
+            </div>
+        </div>
+
+        <div class="debug-section">
+            <h2>CSS Yükleme Durumu</h2>
+            <div id="css-status"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('CSS Debug sayfası yüklendi');
+            
+            // CSS yükleme durumunu kontrol et
+            const cssStatus = document.getElementById('css-status');
+            
+            // CSS dosyalarının yüklenip yüklenmediğini kontrol et
+            const styles = document.styleSheets;
+            let loadedCSS = [];
+            
+            for (let i = 0; i < styles.length; i++) {
+                try {
+                    const href = styles[i].href;
+                    if (href) {
+                        loadedCSS.push(href.split('/').pop());
+                    }
+                } catch (e) {
+                    console.log('CSS dosyası erişilemiyor:', e);
+                }
+            }
+            
+            cssStatus.innerHTML = `
+                <h3>Yüklenen CSS Dosyaları:</h3>
+                <ul>
+                    ${loadedCSS.map(css => `<li>${css}</li>`).join('')}
+                </ul>
+                <p><strong>Toplam CSS Dosyası:</strong> ${loadedCSS.length}</p>
+            `;
+            
+            // CSS variables kontrolü
+            const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+            const secondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
+            
+            console.log('CSS Variables:', {
+                primaryColor: primaryColor.trim(),
+                secondaryColor: secondaryColor.trim()
+            });
+            
+            // Form stilleri kontrolü
+            const loginForm = document.querySelector('.login-form');
+            if (loginForm) {
+                const computedStyle = getComputedStyle(loginForm);
+                console.log('Login Form Styles:', {
+                    maxWidth: computedStyle.maxWidth,
+                    margin: computedStyle.margin,
+                    padding: computedStyle.padding,
+                    backgroundColor: computedStyle.backgroundColor,
+                    borderRadius: computedStyle.borderRadius,
+                    boxShadow: computedStyle.boxShadow
+                });
+            }
+        });
+    </script>
+</body>
+</html>
